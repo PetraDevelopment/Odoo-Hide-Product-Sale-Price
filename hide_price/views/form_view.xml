@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_tax_string_prices" model="ir.ui.view">
+        <field name="name">product.tax.string.prices</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+
+        <xpath expr="//group[@name='group_standard_price']/label[@for='list_price']" position="attributes">
+        <attribute name="groups">hide_price17.group_hide_sale_price</attribute>
+        </xpath>
+
+        <xpath expr="//group[@name='group_standard_price']/div[@name='pricing']" position="attributes">
+        <attribute name="groups">hide_price17.group_hide_sale_price</attribute>
+        </xpath>
+        
+            
+        </field>    
+    </record>
+
+    <record id="product_form_cost_prices_inherited" model="ir.ui.view">
+        <field name="name">product.form.cost.prices.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+        
+            <field name="standard_price" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_cost_price</attribute>
+            </field>
+        </field>    
+    </record>
+
+
+</odoo>

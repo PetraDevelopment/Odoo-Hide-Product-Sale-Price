@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- tree view -->
+    <!-- <record id="product_variant_sale_tree_view" model="ir.ui.view">
+        <field name="name">product_variant_sale_tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='lst_price']" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_sale_price</attribute>
+            </xpath>
+        </field>
+    </record> -->
+
+    <!-- <record id="product_variant_cost_tree_view" model="ir.ui.view">
+        <field name="name">product_variant_cost_tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_cost_price</attribute>
+            </xpath> 
+        </field>
+    </record> -->
+<!-- kanban view -->
+
+    <!-- <record id="product_variant_kanban_inherited" model="ir.ui.view">
+        <field name="name">product.variant.kanban.inherited</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//ul/li/strong[field/@name='lst_price']" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_sale_price</attribute>
+            </xpath>
+        </field>
+    </record> -->
+    
+
+     <!-- <record id="product_variant_cost_tree_view" model="ir.ui.view">
+        <field name="name">product_variant_cost_tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_cost_price</attribute>
+            </xpath> 
+        </field>
+    </record> -->
+
+<!-- product variant sale price form -->
+    
+
+ <!-- <record id="product_variant_cost_form_view_variant" model="ir.ui.view">
+        <field name="name">product_variant_cost_form_view_variant</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+
+        <xpath expr="//group[@name='group_standard_price']/label[@for='list_price']" position="attributes">
+            <attribute name="groups">hide_price.group_hide_sale_price</attribute>
+        </xpath> 
+        <xpath expr="//label[@for='list_price']" position="attributes">
+            <attribute name="groups">hide_price17.group_hide_sale_price</attribute>
+        </xpath>
+         <xpath expr="//group[@name='group_standard_price']/div[@name='pricing']" position="attributes">
+            <attribute name="groups">hide_price17.group_hide_sale_price</attribute>
+        </xpath> 
+        </field>
+    </record> -->
+
+    <!-- product variant cost price -->
+
+    <!-- <record id="product_variant_cost_form_view" model="ir.ui.view">
+        <field name="name">product_variant_cost_form_tree</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_standard_price']/label[@for='standard_price']" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_cost_price</attribute>
+            </xpath>
+            <xpath expr="//group[@name='group_standard_price']/div[@name='standard_price_uom']" position="attributes">
+               <attribute name="groups">hide_price17.group_hide_cost_price</attribute>
+            </xpath>
+        </field>
+    </record> -->
+</odoo>    
