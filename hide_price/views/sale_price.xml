@@ -1,0 +1,69 @@
+<odoo>
+<!-- sale price kanban view  -->
+    <record id="kanban_sale_price" model="ir.ui.view">
+        <field name="name">kanban_sale_price</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='product_lst_price']" position="attributes">
+               <attribute name="groups">hide_price14.group_hide_sale_price</attribute>
+            </xpath>  
+        </field>
+    </record>
+
+<!-- sale price tree view -->
+
+    <record id="view_product_tree_sale_inherited" model="ir.ui.view">
+        <field name="name">product.tree.sale.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='list_price']" position="attributes">
+               <attribute name="groups">hide_price14.group_hide_sale_price</attribute>
+
+            </xpath>
+        </field>
+    </record>
+
+    <!-- sale price form view -->
+
+    <record id="product_form_sale_price_inherited" model="ir.ui.view">
+        <field name="name">product.form.sale.price.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//group[@name='group_standard_price']/label[@for='list_price']" position="attributes">
+               <attribute name="groups">hide_price14.group_hide_sale_price</attribute>
+            </xpath>
+            <xpath expr="//group[@name='group_standard_price']/div[@name='pricing']" position="attributes">
+               <attribute name="groups">hide_price14.group_hide_sale_price</attribute>
+            </xpath> 
+           
+        </field>
+    </record>
+
+<!-- purchase view -->
+    <record id="product_template_form_view_new" model="ir.ui.view">
+        <field name="name">product.purchase.template.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='purchase']" position="inside">
+                <field name="seller_ids" invisible="1"/>
+
+                <group name="bill" invisible="1">
+                    <field name="seller_ids" invisible="0">
+                        <tree>
+                            <field name="name" />
+                            <field name="price" groups="hide_price14.group_hide_sale_price"/>     
+                            <field name="currency_id" groups="hide_price14.group_hide_sale_price"/>
+                            <field name="delay" />
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
