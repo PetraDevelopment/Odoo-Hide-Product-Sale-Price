@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- cost price tree view  -->
+    <record id="view_product_tree_cost_inherited" model="ir.ui.view">
+        <field name="name">product.tree.cost.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+               <attribute name="groups">hide_price15.group_hide_cost_price</attribute>
+            </xpath>
+           
+        </field>
+    </record>
+
+    <!-- sale price form view  -->
+
+    <record id="product_form_cost_price_inherited" model="ir.ui.view">
+        <field name="name">product.form.cost.price.inherited</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_standard_price']/label[@for='standard_price']" position="attributes">
+               <attribute name="groups">hide_price15.group_hide_cost_price</attribute>
+            </xpath>
+            <xpath expr="//group[@name='group_standard_price']/div[@name='standard_price_uom']" position="attributes">
+               <attribute name="groups">hide_price15.group_hide_cost_price</attribute>
+            </xpath>       
+        </field>
+    </record>
+    <!-- cost price product variant tree -->
+
+    <record id="product_variant_cost_tree_view" model="ir.ui.view">
+        <field name="name">product_variant_cost_tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+               <attribute name="groups">hide_price15.group_hide_cost_price</attribute>
+            </xpath> 
+        </field>
+    </record>
+
+    <!-- product variant tree -->
+
+    
+
+    <record id="product_variant_cost_tree_view" model="ir.ui.view">
+        <field name="name">product_variant_cost_tree</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='standard_price']" position="attributes">
+            <attribute name="groups">hide_price15.group_hide_cost_price</attribute> <!-- Show the field based on group -->
+            </xpath> 
+        </field>
+    </record>
+<!-- product variant form  -->
+
+    <record id="product_variant_cost_form_view" model="ir.ui.view">
+        <field name="name">product_variant_cost_form_tree</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_standard_price']/label[@for='standard_price']" position="attributes">
+               <attribute name="groups">hide_price15.group_hide_cost_price</attribute>
+            </xpath>
+            <xpath expr="//group[@name='group_standard_price']/div[@name='standard_price_uom']" position="attributes">
+               <attribute name="groups">hide_price15.group_hide_cost_price</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
