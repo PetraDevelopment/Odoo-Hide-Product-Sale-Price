@@ -4,6 +4,7 @@
     'depends': ['base', 'product'],
     'category':'Purchase',
     'author':'Petra Software Industry',
+    'website':'www.t-petra.com',
     'data':['security/hide_price_group.xml',
             'views/sale_price.xml',
             'views/cost_price.xml'
