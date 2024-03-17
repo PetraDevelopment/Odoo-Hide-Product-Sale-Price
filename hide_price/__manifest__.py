@@ -5,6 +5,7 @@
     'category':'Purchase',
     'author':'Petra Software Industry',
     'website':'www.t-petra.com',
+     'license': 'LGPL-3',
     'data':['security/hide_price_group.xml',
            'views/form_view.xml' ,
             'views/new_kanban_view.xml',
