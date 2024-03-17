@@ -11,4 +11,6 @@
     'images': [
         'static/description/icon.png'
     ],
+          'price':8,
+    'currency':'USD'
     }
