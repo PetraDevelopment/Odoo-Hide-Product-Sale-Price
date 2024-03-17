@@ -4,6 +4,7 @@
     'depends': ['base', 'product'],
     'category':'Purchase',
     'author':'Petra Software Industry',
+      'website':'www.t-petra.com',
     'data':['security/hide_price_group.xml',
            'views/form_view.xml' ,
             'views/new_kanban_view.xml',
