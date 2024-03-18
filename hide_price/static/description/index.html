@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +6,20 @@
     <title>Hide product Price</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0;
-            padding: 0;
-        }
+          }
+          
+        .responsive-img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+        margin:auto ;
+      }
+    
+      
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -22,13 +32,17 @@
             text-align: center;
             margin-top: 20px;
         }
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-        .image {
-            max-width: 45%;
+        
+        
+    
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .image-container {
+                flex-direction: column;
+            }
         }
     </style>
     
@@ -40,71 +54,234 @@
             <h4>- Uncheck or check show sales price or show cost price group to show/hide 
                 product price for admin and user (Photo 1)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image1.png" alt="Image 1" width="1000" height="450">
+            <img  src="assets/image1.png" alt="Image 1"  class="responsive-img">
+        
+        <div class="message">
+            <h4>- Show Sale price in kanban view (Photo 2)</h4>
         </div>
+        
+            <img  src="assets/image2.png" alt="Image 2"  class="responsive-img">
+        <div class="message">
+            <h4>- Hide Sale price in kanban view (Photo 3)</h4>
+        </div>
+        
+            <img  src="assets/image3.png" alt="Image 3"  class="responsive-img">
+        
+        <div class="message">
+            <h4>- Show sales price and cost price in tree view (Photo4)</h4>
+        </div>
+        
+            <img  src="assets/image4.png" alt="Image 4"  class="responsive-img">
+        <div class="message">
+            <h4>- Hide sales price and cost price in tree view (Photo 5)</h4>
+        </div>
+        
+            <img  src="assets/image5.png" alt="Image 5"  class="responsive-img">
+        <div class="message">
+            <h4>- Show sales price and cost price in form view (Photo 6)</h4>
+        </div>
+        
+            <img  src="assets/image6.png" alt="Image 6"  class="responsive-img">
+        <div class="message">
+            <h4>- Hide sales price and cost price in form view (Photo 7)</h4>
+        </div>
+        
+            <img  src="assets/image7.png" alt="Image 7"  class="responsive-img">
+        <div class="message">
+            <h4>- Show sales price and cost price in a tree view in product variants (Photo 8)</h4>
+        </div>
+        
+            <img  src="assets/image8.png" alt="Image 8"  class="responsive-img">
+        <div class="message">
+            <h4>- Hide sales price and cost price in a tree view in product variants (Photo 9)</h4>
+        </div>
+        
+            <img  src="assets/image9.png" alt="Image 9"  class="responsive-img">
+        <div class="message">
+            <h4>- Show sales price in kanban view in product variants (Photo 10)</h4>
+        </div>
+        
+            <img  src="assets/image10.png" alt="Image 10"  class="responsive-img">
+        <div class="message">
+            <h4>- Hide sales price in kanban view in product variants (Photo 11)</h4>
+        </div>
+        
+            <img  src="assets/image11.png" alt="Image 11"  class="responsive-img">
+        <div class="message">
+            <h4>- Show product price in the purchase form view. (Photo 12)</h4>
+        </div>
+        
+            <img  src="assets/image12.png" alt="Image 12"  class="responsive-img">
+        <div class="message">
+            <h4>- Hide the product price in the purchase form view. (Photo 13)</h4>
+        </div>
+        
+            <img  src="assets/image13.png" alt="Image 13"  class="responsive-img">
+        
+    </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide product Price</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .responsive-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .gray-square {
+            width: 800px; 
+            height: 400px; 
+            background-color: 	#E8E8E8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .image-container {
+                flex-direction: column;
+            }
+            .gray-square {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hide product Price</h1>
+        <div class="message">
+            <h4>- Uncheck or check show sales price or show cost price group to show/hide 
+                product price for admin and user (Photo 1)</h4>
+        </div>
+        <img src="assets/image1.png" alt="Image 1" class="responsive-img">
+        
         <div class="message">
             <h4>- Show Sale price in kanban view (Photo 2)</h4>
         </div>
         <div class="image-container">
-            <img  src="assets/image2.png" alt="Image 2" width="1000" height="450">
+            <div class="gray-square">
+                <img src="assets/image2.png" alt="Image 2" class="responsive-img">
+            </div>
         </div>
+        
         <div class="message">
             <h4>- Hide Sale price in kanban view (Photo 3)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image3.png" alt="Image 3" width="1000" height="450">
-        </div><div class="message">
+        <img src="assets/image3.png" alt="Image 3" class="responsive-img">
+        
+        <div class="message">
             <h4>- Show sales price and cost price in tree view (Photo4)</h4>
         </div>
         <div class="image-container">
-            <img  src="assets/image4.png" alt="Image 4" width="1000" height="450">
-        </div><div class="message">
+            <div class="gray-square">
+                <img src="assets/image4.png" alt="Image 4" class="responsive-img">
+            </div>
+        </div>
+
+        <div class="message">
             <h4>- Hide sales price and cost price in tree view (Photo 5)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image5.png" alt="Image 5" width="1000" height="450">
-        </div><div class="message">
+        <img src="assets/image5.png" alt="Image 5" class="responsive-img">
+
+        <div class="message">
             <h4>- Show sales price and cost price in form view (Photo 6)</h4>
         </div>
         <div class="image-container">
-            <img  src="assets/image6.png" alt="Image 6" width="1000" height="450">
-        </div><div class="message">
+            <div class="gray-square">
+                <img src="assets/image6.png" alt="Image 6" class="responsive-img">
+            </div>
+        </div>
+        
+        <div class="message">
             <h4>- Hide sales price and cost price in form view (Photo 7)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image7.png" alt="Image 7" width="1000" height="450">
-        </div><div class="message">
+        <img src="assets/image7.png" alt="Image 7" class="responsive-img">
+
+        <div class="message">
             <h4>- Show sales price and cost price in a tree view in product variants (Photo 8)</h4>
         </div>
         <div class="image-container">
-            <img  src="assets/image8.png" alt="Image 8" width="1000" height="450">
-        </div><div class="message">
+            <div class="gray-square">
+                <img src="assets/image8.png" alt="Image 8" class="responsive-img">
+            </div>
+        </div>
+
+        <div class="message">
             <h4>- Hide sales price and cost price in a tree view in product variants (Photo 9)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image9.png" alt="Image 9" width="1000" height="450">
-        </div><div class="message">
+        <img src="assets/image9.png" alt="Image 9" class="responsive-img">
+
+        <div class="message">
             <h4>- Show sales price in kanban view in product variants (Photo 10)</h4>
         </div>
         <div class="image-container">
-            <img  src="assets/image10.png" alt="Image 10" width="1000" height="450">
-        </div><div class="message">
+            <div class="gray-square">
+                <img src="assets/image10.png" alt="Image 10" class="responsive-img">
+            </div>
+        </div>
+
+        <div class="message">
             <h4>- Hide sales price in kanban view in product variants (Photo 11)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image11.png" alt="Image 11" width="1000" height="450">
-        </div><div class="message">
+        <img src="assets/image11.png" alt="Image 11" class="responsive-img">
+
+        <div class="message">
             <h4>- Show product price in the purchase form view. (Photo 12)</h4>
         </div>
         <div class="image-container">
-            <img  src="assets/image12.png" alt="Image 12" width="1000" height="450">
-        </div><div class="message">
+            <div class="gray-square">
+                <img src="assets/image12.png" alt="Image 12" class="responsive-img">
+            </div>
+        </div>
+
+        <div class="message">
             <h4>- Hide the product price in the purchase form view. (Photo 13)</h4>
         </div>
-        <div class="image-container">
-            <img  src="assets/image13.png" alt="Image 13" width="1000" height="450">
-        </div>
+        <img src="assets/image13.png" alt="Image 13" class="responsive-img">
+
     </div>
 </body>
 </html>
